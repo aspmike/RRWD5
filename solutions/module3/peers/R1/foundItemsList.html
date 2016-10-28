@@ -1,0 +1,10 @@
+<div style="padding-top: 50px;">
+<ul>
+  <li ng-repeat="item in foundItemsProp">{{ item.name }}, {{ item.short_name }}, {{ item.description }}
+    <button ng-click="onRemove({
+      index: $index
+    })">I don't want this one!</button>
+  </li>
+</ul>
+<p ng-if="errorMessage">{{ errorMessage }}</p>
+</div>
