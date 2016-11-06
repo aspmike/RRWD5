@@ -14,6 +14,7 @@ function SignUpController(RegistrationService, MenuService) {
       console.log("Submit accepted!" + reg.user);
       RegistrationService.setPreference(reg.user);
       reg.favInvalid = false;
+      reg.registered = true;
     }, function(err) {
       console.log("No such item!" + reg.user.favdish)
       reg.favInvalid = true;

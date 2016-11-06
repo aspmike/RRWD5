@@ -60,12 +60,16 @@
         ng-disabled="regForm.$invalid"
         ng-click="reg.submit()">Submit</button>
 
-        <!-- <div style="margin-top: 10px;">
-          Form valid? {{ regForm.$valid }}
-        </div> -->
-
-
   </form>
+
+  <div ng-show="reg.registered">
+    <h2>Your information has been saved.</h2>
+    <span>First name: {{ reg.user.firstname }}</span><br>
+    <span>Last name: {{ reg.user.lastname }}</span><br>
+    <span>email:  {{ reg.user.email }} </span><br>
+    <span>phone:  {{ reg.user.phone }} </span><br>
+    <span>Favorite dish:  {{ reg.user.favdish }} </span><br>
+  </div>
 
 </fieldset>
 </div>
