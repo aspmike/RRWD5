@@ -1,6 +1,6 @@
 # Restaurant
 
-Solution for Assignment 5 
+Solution for Assignment 5 (Michael KERNLER)
 
 Restaurant front-end implementation in AngularJS for David Chu's China Bistro.
 

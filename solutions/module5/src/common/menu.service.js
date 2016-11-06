@@ -15,20 +15,32 @@ function MenuService($http, ApiPath) {
     });
   };
 
-
   service.getMenuItems = function (category) {
-    var config = {};
-    if (category) {
-      config.params = {'category': category};
-    }
+  var config = {};
+  if (category) {
+    config.params = {'category': category};
+  }
 
-    return $http.get(ApiPath + '/menu_items.json', config).then(function (response) {
-      return response.data;
+  return $http.get(ApiPath + '/menu_items.json', config).then(function (response) {
+    return response.data;
     });
-  };
+  }
+
+  service.getMenuItem = function (short_name) {
+    console.log('getMenuItem(' + short_name + ')');
+    return $http.get(ApiPath + '/menu_items/' + short_name + '.json').then(
+      function (response) {
+        console.log('getMenuItem.data:' + JSON.stringify(response.data));
+        return response.data;
+      }
+      // ,
+      // function (err) {
+      //   console.log("error!")
+      //   return null;
+      // }
+    );
+  }
 
 }
-
-
 
 })();

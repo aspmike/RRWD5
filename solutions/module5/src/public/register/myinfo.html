@@ -1,0 +1,21 @@
+<div class="container">
+
+<h1>My Info</h1>
+
+<div ng-show="info.registered">
+  <span>First name: {{ info.user.firstname }}</span><br>
+  <span>Last name: {{ info.user.lastname }}</span><br>
+  <span>email:  {{ info.user.email }} </span><br>
+  <span>phone:  {{ info.user.phone }} </span><br>
+  <span>Your favorite dish: {{ info.user.favdish }} {{ info.item.name }}</span><br>
+  <span>{{ info.item.description }}</span><br>
+  <div class="container">
+    <menu-item menuItem="info.item"></menu-item>
+  </div>
+</div>
+
+<div ng-hide="info.registered">
+  <span>Not Signed Up Yet. </span><a ui-sref="public.signup">Sign up Now!</a>
+</div>
+
+</div>
