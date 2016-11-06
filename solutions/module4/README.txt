@@ -1,1 +1,1 @@
-Solution for Assignment 4
+Solution for Assignment 4  (Michael KERNLER)
